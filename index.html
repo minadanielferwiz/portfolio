@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mina Daniel — Professional Portfolio</title>
+
+  <!-- Fonts & Libraries -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">MD</div>
+        <div>
+          <h1>Mina Daniel</h1>
+          <div style="font-size:13px;color:var(--muted)">Flutter Developer</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="themeBtn" title="Toggle Theme">🌗</button>
+        <button class="btn btn-cta" id="hireBtn">Hire Me</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="hero-left card" data-aos="fade-right">
+        <h1>Hello, I'm Mina Daniel</h1>
+        <h3>Flutter Developer</h3>
+        <h5 class="summary">
+          a passionate Flutter developer. I specialize in building clean,
+          scalable, and high-performance mobile applications using Flutter, following modern architecture and design
+          patterns. I focus on delivering smooth UI/UX, maintainable code, and efficient solutions that solve real-world
+          problems.
+        </h5>
+
+      </div>
+
+      <div class="hero-right" data-aos="fade-left">
+        <div class="profile frame">
+          <img id="profilePic" src="C:\Users\minad\Desktop\portfolio\IMG-20250710-WA0276.jpg" alt="Mina Daniel"">
+    </div>
+  </div>
+</section>
+
+
+  
+    <!-- SERVICES -->
+    <section id="services" data-aos="fade-up">
+          <div class="section-header">
+            <h3>Services</h3>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <h4>Mobile App Development</h4>
+              <div class="muted">Full app development, publishing to stores</div>
+            </div>
+            <div class="card">
+              <h4>Architecture & Consulting</h4>
+              <div class="muted">Code reviews, architecture, performance</div>
+            </div>
+            <div class="card">
+              <h4>API Integration</h4>
+              <div class="muted">Secure REST, pagination, auth flows</div>
+            </div>
+          </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" data-aos="fade-up">
+      <div class="section-header">
+        <h3>Selected Projects</h3>
+      </div>
+      <div class="grid" id="projectsGrid"></div>
+    </section>
+
+
+
+    <!-- TIMELINE -->
+    <section id="timeline" data-aos="fade-up">
+      <div class="section-header">
+        <h3>Journey</h3>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h4>2021 — 2025</h4>
+          <div class="muted">B.Sc. Computer Science — Cairo University</div>
+        </div>
+        <div class="card">
+          <h4>2022</h4>
+          <div class="muted">Started learning Flutter & building projects</div>
+        </div>
+        <div class="card">
+          <h4>2024</h4>
+          <div class="muted">Built production-grade apps with maps & chat</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-aos="fade-up">
+      <div class="section-header">
+        <h3>Contact</h3>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h4>Get in touch</h4>
+          <form id="contactForm">
+            <input id="name" name="name" placeholder="Your name" required>
+            <input id="email" name="email" placeholder="Your email" type="email" required>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            <div style="display:flex;gap:12px;margin-top:8px">
+              <button class="btn btn-cta" type="submit">Send Message</button>
+            </div>
+            <div id="formStatus" style="margin-top:8px;color:var(--accent);display:none"></div>
+          </form>
+        </div>
+<div class="card contact-info">
+  <h4>Contact Info</h4>
+  <p class="muted">
+     <h5 >Email: minadaniel893@gmail.com</h5><br>
+    <h5 >Phone: +20 120 782 3313</h5><br>
+    <h5 >Location: Maadi, Cairo</h5> 
+  </p>
+  <div class="social-links">
+    <a href="https://github.com/minadanielferwiz" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+    <a href="https://wa.me/201207823313" target="_blank"><img src="icons/wahtsapp.png" alt="WhatsApp"></a>
+    <a href="https://www.linkedin.com/in/mina-daniel/" target="_blank"><img src="icons/linked.png" alt="LinkedIn"></a>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2025 — All rights reserved</footer>
+
+  </main>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal" id="projectModal">
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="modalTitle">Project Title</h3>
+        <div class="close" id="closeModal" style="cursor:pointer">✖</div>
+      </div>
+      <div class="media" id="modalMedia" style="margin-top:12px;background:#071028;border-radius:8px"></div>
+      <div style="margin-top:14px" id="modalDesc"></div>
+      <div style="margin-top:18px;display:flex;gap:10px">
+        <a id="modalRepo" class="btn btn-ghost" target="_blank" href="https://github.com/Project-A2Z/a2z-dashboard">View Repo</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: AOS + GSAP -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- JS File -->
+  <script src="js.js"></script>
+
+</body>
+
+</html>
